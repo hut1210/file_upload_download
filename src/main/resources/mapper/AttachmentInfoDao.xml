@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cebbank.occm.hk.customer.mapper.AttachmentInfoDao">
+
+    <insert id="saveAttachmentInfo" parameterType="com.cebbank.occm.hk.customer.domain.AttachmentInfo">
+        insert into attachment_info values
+        (#{attachNo},#{attachName},#{attachSize},#{attachPath},#{customerAttachInfoNo},#{uploadTime})
+    </insert>
+    <delete id="deleteAttachmentInfo" parameterType="java.lang.String">
+        delete from attachment_info where customerAttachInfoNo=#{customAttachmentNo}
+    </delete>
+
+</mapper>
